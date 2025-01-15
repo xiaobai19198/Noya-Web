@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noya Nel - 官网</title>
+    <link rel="stylesheet" href="index-style.css?v=1.0.0">
+    <link rel="stylesheet" href="notification.css?v=1.0.0">
+</head>
+<body>
+    <div class="notification-container" id="notificationContainer"></div>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <span class="logo-text">Noya Nel</span>
+        </div>
+        <div class="header-buttons">
+            <button onclick="redirectToLogin()">用户管理</button>
+            <button onclick="redirectToPurchase()">购买卡密</button>
+        </div>
+    </header>
+    
+    <main>
+        <!-- 首屏部分 -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Noya Netease Launcher</h1>
+                <p class="subtitle">致力于更快速、更稳定、更便捷、更好的服务</p>
+                <div class="main-buttons">
+                    <button class="primary-btn" onclick="redirectToLogin()">用户管理</button>
+                    <button class="primary-btn" onclick="redirectToPurchase()">购买卡密</button>
+                </div>
+            </div>
+            <!-- 将滚动提示放回hero-section -->
+            <div class="scroll-hint">↓</div>
+        </section>
+
+        <!-- 公告按钮和内容 -->
+        <div class="announcement-btn">
+            <span class="announcement-icon">📢</span>
+        </div>
+        <div class="announcement">
+            <div class="announcement-header">
+                <span>最新公告</span>
+            </div>
+            <div class="announcement-content">
+                <div class="announcement-item">
+                    <span class="date">2024-01-15</span>
+                    <span class="text">新增自助解封功能，封禁用户可进行自助解封。</span>
+                </div>
+                <div class="announcement-item">
+                    <span class="date">2024-01-12</span>
+                    <span class="text">Noya网站上线，支持用户管理、签到打卡等功能！</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 特性和数据统计合并为一页 -->
+        <section class="features-stats-section">
+            <div class="features">
+                <div class="feature-item">
+                    <div class="feature-icon">🚀</div>
+                    <h3>快速启动</h3>
+                    <p>优化的启动流程，更快进入游戏</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>便捷使用</h3>
+                    <p>提供便捷的账号管理，支持多账号切换~</p>
+                    <p>每周领取弹性时长奖励，无需担心账号到期!</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚡</div>
+                    <h3>稳定运行</h3>
+                    <p>采用CSharp Avalonia框架开发，性能稳定，运行流畅</p>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">2000+</div>
+                    <div class="stat-label">用户数量</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">运行稳定性</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">7个月</div>
+                    <div class="stat-label">已稳定运行</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <span>QDQ Team版权所有</span>
+                <span class="divider">|</span>
+                <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025047608号</a>
+                <span class="divider">|</span>
+                <span class="contact">联系我们：
+                    <a href="tencent://message/?uin=3593901292" class="qq-link">
+                        <span class="qq-icon">QQ</span>
+                        3593901292
+                    </a>
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script src="notification.js?v=1.0.0"></script>
+    <script src="index-function.js?v=1.0.0"></script>
+</body>
+</html>

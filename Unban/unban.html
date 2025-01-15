@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>账户解封 - Noya Nel</title>
+    <link rel="stylesheet" href="unban-style.css?v=1.0.0">
+    <link rel="stylesheet" href="../notification.css?v=1.0.0">
+</head>
+<body>
+    <div class="notification-container" id="notificationContainer"></div>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <span class="logo-text">Noya Nel</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="unban-container">
+            <!-- 状态显示区域 -->
+            <div class="status-container" id="statusContainer">
+                <div class="uid-display">UID: <span id="userUid">-</span></div>
+                <h3>检查状态中...</h3>
+                <p>正在验证您的账户状态</p>
+            </div>
+
+            <!-- 解封表单 -->
+            <form id="unbanForm" class="unban-form" style="display: none;">
+                <div class="input-group">
+                    <input type="text" id="card" placeholder="请输入解封码" required>
+                </div>
+                <button type="submit" class="submit-btn">提交解封申请</button>
+                <div class="tip">解封码可以从购买页面获取</div>
+            </form>
+
+            <!-- 解封进度 -->
+            <div class="unban-progress" id="unbanProgress" style="display: none;">
+                <div class="time">预计解封时间：<span id="unbanTime">-</span></div>
+            </div>
+
+            <!-- 底部按钮 -->
+            <div class="button-group" id="buttonGroup">
+                <a href="../User/user.html" class="btn back">返回用户中心</a>
+                <a href="http://121.62.30.230:60906/" target="_blank" class="btn buy">购买解封码</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <span>QDQ Team版权所有</span>
+            <span class="divider">|</span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025047608号</a>
+        </div>
+    </footer>
+
+    <script src="../notification.js?v=1.0.0"></script>
+    <script src="unban-function.js?v=1.0.0"></script>
+</body>
+</html> 

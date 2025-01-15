@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户中心 - Noya Nel</title>
+    <link rel="stylesheet" href="user-style.css">
+    <link rel="stylesheet" href="../notification.css">
+</head>
+<body>
+    <div class="notification-container" id="notificationContainer"></div>
+    
+    <!-- 将模态窗口移到这里 -->
+    <div class="ban-modal" id="banModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#ff1744" stroke-width="2"/>
+                        <path d="M15 9L9 15" stroke="#ff1744" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M9 9L15 15" stroke="#ff1744" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h2>账户已被封禁</h2>
+            </div>
+            <div class="modal-body">
+                <p>您的账户当前处于封禁状态，需要解除后才能继续使用。您可以选择前往自助解封页面进行处理。</p>
+                <div class="no-remind-checkbox">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" id="noRemindCheck">
+                        <span class="checkmark"></span>
+                        <span class="checkbox-text">7天内不再提醒</span>
+                    </label>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="modal-btn primary" onclick="redirectToUnban()">前往解封</button>
+                <button class="modal-btn secondary" onclick="closeBanModal(document.getElementById('noRemindCheck').checked)">我知道了</button>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <span class="logo-text">Noya Nel</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="profile-container">
+            <div class="welcome-banner">
+                <div class="welcome-text">
+                    <h1>欢迎回来</h1>
+                    <p>尊贵的 <span class="user-name" id="welcomeUser">Noya用户</span></p>
+                </div>
+                <div class="welcome-time" id="welcomeTime"></div>
+            </div>
+            <div class="tabs">
+                <button class="tab-btn active" onclick="switchTab('profile')">用户信息</button>
+                <button class="tab-btn" onclick="switchTab('daily')">每日福利</button>
+                <button class="tab-btn" onclick="switchTab('settings')">账户设置</button>
+            </div>
+
+            <!-- 用户信息标签页 -->
+            <div class="tab-content active" id="profile">
+                <div class="profile-content">
+                    <div class="info-group">
+                        <div class="info-label">UID</div>
+                        <div class="info-value" id="uid">加载中...</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">账号</div>
+                        <div class="info-value" id="account">加载中...</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">QQ</div>
+                        <div class="info-value" id="qq">加载中...</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">到期时间</div>
+                        <div class="info-value" id="duetime">加载中...</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">账户状态</div>
+                        <div class="info-value" id="status">加载中...</div>
+                    </div>
+                    <div class="info-group">
+                        <div class="info-label">注册地</div>
+                        <div class="info-value" id="location">加载中...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 每日福利标签页 -->
+            <div class="tab-content" id="daily">
+                <div class="daily-content">
+                    <div class="daily-card">
+                        <div class="card-header">
+                            <h3>每日打卡</h3>
+                            <p>每日打卡可领取天卡奖励</p>
+                        </div>
+                        <div class="card-body">
+                            <button class="check-in-btn" onclick="handleDailyCheckIn()">
+                                <span class="icon">📅</span>
+                                <span>立即打卡</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 账户设置标签页 -->
+            <div class="tab-content" id="settings">
+                <div class="settings-content">
+                    <div class="settings-group">
+                        <h3>账户操作</h3>
+                        <div class="button-group">
+                            <button class="unban-btn" id="unbanBtn" onclick="redirectToUnban()" disabled>账户自助解封</button>
+                            <button class="logout-btn" onclick="handleLogout()">注销登录</button>
+                            <a href="../index.html" class="back-btn">返回首页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>QDQ Team版权所有</span>
+            <span class="divider">|</span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025047608号</a>
+        </div>
+    </footer>
+    <script src="../notification.js"></script>
+    <script src="user-function.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录 - Noya Nel</title>
+    <link rel="stylesheet" href="login-style.css">
+    <link rel="stylesheet" href="../notification.css">
+</head>
+<body>
+    <div class="notification-container" id="notificationContainer"></div>
+    <header>
+        <div class="logo">
+            <div class="logo-icon">N</div>
+            <span class="logo-text">Noya Nel</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="login-container">
+            <h2>用户登录</h2>
+            <form id="loginForm" onsubmit="return handleLogin(event)">
+                <div class="input-group">
+                    <label for="account">账号</label>
+                    <input type="text" id="account" placeholder="输入账号" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="password">密码</label>
+                    <input type="password" id="password" placeholder="输入密码" required>
+                </div>
+                
+                <button type="submit" class="login-btn">登 录</button>
+            </form>
+            <div class="back-home">
+                <a href="../index.html">返回首页</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <span>QDQ Team版权所有</span>
+            <span class="divider">|</span>
+            <a href="https://beian.miit.gov.cn/" target="_blank">辽ICP备2025047608号</a>
+        </div>
+    </footer>
+    <script src="../notification.js"></script>
+    <script src="login-function.js"></script>
+</body>
+</html>
